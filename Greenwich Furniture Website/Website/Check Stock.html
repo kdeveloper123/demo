@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Stock</title>
+    <link rel="stylesheet" href="styles4.css"> <!-- Link to your CSS stylesheet -->
+    <style>
+        /* Add your CSS styles here */
+    </style>
+    <script src="script2.js" defer></script> <!-- Link to your JavaScript file -->
+    
+</head>
+<body>
+  <!-- Navigation Menu -->
+  <div class="menu">
+    <a href="Check Stock.html"> Check Stock</a>
+    <a href="Register.html"> Regsiter</a>
+    <a href="Login.html"> Login</a>
+    <a href="Home.html"> Home</a>
+    <a href="Browse Catalogue.html"> Browse catalogue</a>
+    <a href="Make a purchase.html"> Make a Purchase</a>
+    <a href="Make Bulk Order.html">Make a Bulk Order</a>
+  <!-- Add more links as needed -->
+  </div>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Greenwich Furniture Shop</h1>
+  </div>
+
+
+  <table id="stock-table">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Stock data will be dynamically added here -->
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+  <!-- Stock Check Form -->
+  <div class="stock-check-form">
+    <h2>Enter Product Details to Check Stock</h2>
+    <form id="stock-form">
+      <div>
+        <label for="product-name">Product Name:</label>
+        <input type="text" id="product-name" name="product-name" required>
+      </div>
+      <button type="submit">Check Stock</button>
+    </form>
+    <div id="stock-result"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Greenwich Furniture Shop</p>
+  </footer>
+</body>
+</html>

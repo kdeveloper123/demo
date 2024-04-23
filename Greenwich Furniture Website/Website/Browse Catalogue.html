@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Catalogue - Greenwich Furniture Shop</title>
+  <link rel="stylesheet" href="styles2.css"> <!-- Link to your CSS stylesheet -->
+  <style>
+    /* Additional CSS can be added here if necessary */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+    nav ul li:last-child {
+      margin-right: 0;
+    }
+    main {
+      padding: 20px;
+    }
+    .product {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    .product img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .product h3 {
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+    .product p {
+      margin: 5px 0;
+    }
+    .product button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .product button:hover {
+      background-color: #45a049;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Greenwich Furniture Shop</h1>
+    <nav>
+      <ul>
+        <li><a href="Browse Catalogue.html">Browse Catalogue</a></li>
+        <li><a href="Register.html">Register</a></li>
+        <li><a href="Login.html">Login</a></li>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Make a purchase.html">Make a Purchase</a></li>
+        <li><a href="Check Stock.html">Check Stock</a></li>
+        <li><a href="Make Bulk Order.html">Make a Bulk Order</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Greenwich Furniture Shop</p>
+  </footer>
+
+  <script>
+
+
+
+
+    
+
+// Define an array to store the items in the cart
+var shoppingCart = [];
+
+// Function to add a product to the cart
+function addToCart(productName, price) {
+  // Create an object representing the product
+  var product = {
+    name: productName,
+    price: price
+  };
+
+  // Add the product to the shopping cart array
+  shoppingCart.push(product);
+
+  // Display a confirmation message
+  alert(productName + " added to cart.");
+}
+
+// Function to display the items in the cart
+function displayCart() {
+  // Clear any previous content
+  document.getElementById("cartItems").innerHTML = "";
+
+  // Loop through the items in the cart and display them
+  shoppingCart.forEach(function(product) {
+    var item = document.createElement("li");
+    item.textContent = product.name + " - £" + product.price;
+    document.getElementById("cartItems").appendChild(item);
+  });
+
+
+// Function to remove a product from the cart
+function removeFromCart(index) {
+      // Remove the product at the specified index from the shopping cart array
+      shoppingCart.splice(index, 1);
+
+      // Redisplay the cart
+      displayCart();
+    }
+
+    // Function to display the items in the cart
+    function displayCart() {
+      // Clear any previous content
+      document.getElementById("cartItems").innerHTML = "";
+
+      // Loop through the items in the cart and display them
+      shoppingCart.forEach(function(product, index) {
+        var item = document.createElement("li");
+        item.textContent = product.name + " - $" + product.price;
+
+        // Create a button to remove the product from the cart
+        var removeButton = document.createElement("button");
+        removeButton.textContent = "Remove";
+        removeButton.onclick = function() {
+          removeFromCart(index);
+        };
+
+        // Append the remove button to the list item
+        item.appendChild(removeButton);
+
+        // Append the list item to the cart
+        document.getElementById("cartItems").appendChild(item);
+      });
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+  
+}
+</script>
+</head>
+<body>
+<h1>Browse Catalogue</h1>
+
+<!-- Product 1 -->
+<div class="product">
+    <img src="Images/Grey Furniture.jpg" alt="Product 1" height="66" width= "66">
+    <h3>Product 1</h3>
+    <p>Grey furniture for living rooms. Perfect for relaxing after a long day at work or chilling with friends/family .</p> 
+<p>Price: £48</p>
+<!-- Button to add Product 1 to cart -->
+<button onclick="addToCart('Product 1', 48)">Add to Cart</button>
+
+
+</div>
+
+<!-- Product 2 -->
+<div class="product">
+    <img src="Images/Fold up couch.jpg" alt="Product 2" height="66" width="66">
+    <h3>Product 2</h3>
+    <p>Fold up couch could be folded into a bed or couch. Perfect for sleeping on in the night and perfect for daytime chilling with friends/family.</p>
+    <p>Price: £61</p>
+<!-- Button to add Product 2 to cart -->
+<button onclick="addToCart('Product 2', 61)">Add to Cart</button>
+</div>
+
+<!-- Display Cart -->
+<h2>Shopping Cart</h2>
+<ul id="cartItems"></ul>
+
+<!-- Button to display cart contents -->
+<button onclick="displayCart()">Show Cart</button>
+
+  </script>
+   
+   
+</body>
+</html>

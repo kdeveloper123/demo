@@ -1,0 +1,85 @@
+
+/* Body styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #023483;
+    color: #023483;
+    padding: 20px;
+    
+  }
+  
+  /* Navigation styles */
+  nav {
+    background-color: #555;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Main content styles */
+  .main-content {
+    padding: 14px;
+  }
+  
+  .product {
+    border: 1px solid #023483;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  .product h2 {
+    margin-top: 0;
+  }
+  
+  .product p {
+    margin: 5px 0;
+  }
+  
+  .product button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .product button:hover {
+    background-color: #45a049;
+  }
+  
+
+  footer {
+    background-color: #555;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 10px;
+    position: absolute; /* Set the footer position to absolute */
+    bottom: 0; /* Position the footer at the bottom of the page */
+    width: 100%; /* Set the width of the footer to 100% */}

@@ -1,0 +1,18 @@
+/* Styles for the payment form */
+.payment-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+
+/* Style for hyperlinks */
+a {
+    color: rgb(5, 5, 5); /* Change the color to your desired color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  /* Style for hyperlinks on hover */
+  a:hover {
+    color: rgb(12, 12, 12); /* Change the color to your desired hover color */
+  }
+  

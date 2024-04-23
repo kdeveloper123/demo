@@ -1,0 +1,79 @@
+/* Resetting default styles */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    font-size: 13px;
+  }
+  
+  header {
+    background-color: #555;
+    color: #f4f6f6;
+    padding: 20px;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #f5fbf9;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .banner {
+    background-color: #13ebeb;
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .banner h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .banner p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #555;
+    color: #fbf7f7;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background-color: hsl(184, 92%, 42%);
+  }
+  
+   footer {
+    background-color: #555;
+    color: #fff;
+   font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 10px;
+    position: absolute; /* Set the footer position to absolute */
+    bottom: 0; /* Position the footer at the bottom of the page */
+    width: 100%; /* Set the width of the footer to 100% */}

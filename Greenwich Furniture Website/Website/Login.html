@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #555;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .input-group {
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #fff;
+        }
+        p {
+            margin-top: 10px;
+            color: rgb(248, 247, 252);
+        }
+        footer {
+            background-color: #f4f4f4;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+/* Change hyperlink color */
+header nav a {
+            color: #fff; /* Change the color to your preferred color */
+            text-decoration: none; /* Remove underline from hyperlinks */
+            margin: 0 10px; /* Add some spacing between links */
+        }
+
+        footer {
+    background-color: #555; /* Change to the color you desire */
+    color: #fff; /* Change the text color to contrast with the background */
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <header>
+    <h1>Greenwich Furniture Shop</h1>
+    <nav>
+        <a href="Login.html">Login</a> |
+        <a href="Register.html">Register</a> |  
+        <a href="Home.html">Home</a> |
+        <a href="Browse Catalogue.html">Browse Catalogue</a> |
+        <a href="Make a purchase.html">Make a Purchase</a> |
+        <a href="Check Stock.html">Check Stock</a> 
+        <a href="Make Bulk Order.html">Make a Bulk Order</a> ||
+        
+    </nav>
+
+
+
+
+
+
+    <div class="container">
+        <h2>Login</h2>
+        <div class="input-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$">
+        </div>
+        <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$">
+        </div>
+        <button onclick="login()">Login</button>
+        <!-- Success message -->
+        <p id="login-message" style="display: none; color: aquamarine;">Your login was successful!</p>
+        <!-- Error message -->
+        <p id="error-message" style="display: none; color: red;">Invalid username or password. Username and password must be at least 6 characters long.</p>
+    </div>
+    
+
+
+    <footer>
+        <p>&copy; 2024 Greenwich Furniture Shop</p>
+    </footer>
+
+    <script>
+        function login() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        var errorMessage = document.getElementById('error-message');
+        var successMessage = document.getElementById('login-message');
+
+        // Validation check
+        if (username.length >= 6 && password.length >= 6) {
+            // Display success message
+            successMessage.style.display = 'block';
+            // Hide error message
+            errorMessage.style.display = 'none';
+            // Here you can redirect the user to another page or perform other actions
+        } else {
+            // Display error message
+            errorMessage.style.display = 'block';
+            // Hide success message
+            successMessage.style.display = 'none';
+            // Prevent the default form submission
+            event.preventDefault();
+        }
+    }
+    </script>
+</body>
+</html>
+
+

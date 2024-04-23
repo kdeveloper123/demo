@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Purchase</title>
+    <link rel="stylesheet" href="styles3.css"> <!-- Link to your CSS stylesheet -->
+    <style>
+        /* CSS for banner */
+        .banner {
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* CSS for navigation */
+        .nav {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #555;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+/* CSS for shopping cart */
+.cart {
+            max-height: 200px; /* Adjust max-height as needed */
+            overflow-y: auto; /* Enable vertical scrolling */
+            margin-bottom: 700px; /* Add margin to prevent overlap with footer */
+        }
+
+
+
+
+
+
+
+        /* CSS for footer */
+        footer {
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 1px 0;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+       
+    </style>
+
+</head>
+<body>
+
+<!-- Banner -->
+    <div class="banner">
+        <h1>Greenwich Furniture Shop</h1>
+    </div>
+
+    <!-- Navigation -->
+        <div class="nav">
+            <a href="Make a purchase.html">Make a purchase</a> |
+            <a href="Register.html">Register</a> |
+            <a href="Login.html">Login</a> | 
+            <a href="Home.html">Home</a> |
+            <a href="Browse Catalogue.html">Browse Catalogue</a> |
+            <a href="Check Stock.html">Check Stock</a> 
+            <a href="Make Bulk Order.html"> Make a Bulk Order</a>  |
+        </div>
+
+       
+       
+       
+        <h1>Make a Purchase</h1>
+        
+
+
+
+
+    <div class="payment-form">
+        <h2>Enter Your Card Details</h2>
+        <!-- Payment form fields -->
+        <form id="payment-form">
+          <div>
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" required>
+          </div>
+          <div>
+            <label for="card-expiry">Expiration Date (MM/YY):</label>
+            <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY" required>
+          </div>
+          <div>
+            <label for="card-cvc">CVC:</label>
+            <input type="text" id="card-cvc" name="card-cvc" required>
+          </div>
+          <button type="submit">Submit card details</button>
+        </form>
+        <div id="payment-result"></div>
+
+
+    <h1>Make a Purchase</h1>
+
+    <div id="products">
+        <h2>Products</h2>
+        <ul>
+            <li>Grey Furniture - £48 <button onclick="addToCart('Grey Furniture', 48)">Add to Cart</button></li>
+            <li>Fold up Couch - £61 <button onclick="addToCart('Fold up Couch', 61)">Add to Cart</button></li>
+        </ul>
+    </div>
+
+    <div id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: £<span id="cart-total">0</span></p>
+        <button onclick="purchase()">Purchase</button>
+    </div>
+
+
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Greenwich Furniture Shop</p>
+</footer>
+
+
+
+
+    <script>
+
+
+
+
+        let cart = [];
+        let total = 0;
+
+        function addToCart(item, price) {
+            cart.push({ item: item, price: price });
+            total += price;
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItemsElement = document.getElementById('cart-items');
+            cartItemsElement.innerHTML = '';
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.item} - £${item.price}`;
+                cartItemsElement.appendChild(li);
+            });
+            document.getElementById('cart-total').textContent = total;
+        }
+
+        function purchase() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            // Perform purchase logic here (e.g., send cart data to server)
+            alert('Purchase successful! Total: £' + total);
+            cart = [];
+            total = 0;
+            updateCart();
+        }
+
+        
+        
+    </script>
+</body>
+</html>
